@@ -1,113 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>CMU Muslim Alumni Network</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <title>CMU Muslim Alumni Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="CMU Muslim Alumni Logo_square.png" type="image/png">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <header class="header-contain">
-        <nav class="nav-header-desktop" role="navigation">
-            <a class="nav-link" href="#">Home</a>
-            <a class="nav-link" href="#">Details</a>
-            <a class="nav-link" href="#">News</a>
-            <a class="nav-link" href="#">Contact</a>
-        </nav>
-        <div class="announcement-bar">
-            <span>Announcement: MSA Alumni Commencement Ceremony RSVP is open!</span>
-            <a href="#">RSVP here</a>
-        </div>
-        <div class="header-content">
-            <div class="logo-star" role="img" aria-label="CMU Muslim Alumni Network Logo">
-                <div class="logo-star-inner"></div>
-            </div>
-            <h1 class="header-title">CMU Muslim Alumni Network</h1>
-            <button class="header-join">Join us</button>
-        </div>
-    </header>
-    <div class="image-break" role="img" aria-label="Decorative Image"></div>
-    <main class="main-section">
-        <section class="what-we-do-section">
-            <h2 class="what-we-do-title">What We Do</h2>
-            <div class="info-cards-container">
-                <article class="info-card-hero" aria-labelledby="mission-title">
-                    <h3 id="mission-title" class="info-card-title">Mission</h3>
-                    <p class="info-card-desc">A united community of Muslim alumni committed to uplifting one another and
-                        empowering future generations of Muslim students at CMU.</p>
-                </article>
-                <article class="info-card-hero" aria-labelledby="vision-title">
-                    <h3 id="vision-title" class="info-card-title">Vision</h3>
-                    <p class="info-card-desc">To build a thriving network of Muslim alumni from Carnegie Mellon
-                        University that fosters lifelong support, spiritual & professional growth, and community.</p>
-                </article>
-            </div>
-        </section>
-        <div class="image-break-section">
-            <div class="image-break-img" role="img"
-                aria-label="Muslim Alumni Network Image"></div>
-        </div>
-        <section class="latest-news-section">
-            <h2 class="latest-news-title">Events</h2>
-            <div class="news-cards-container">
-                <article class="news-card-hero" aria-labelledby="coffee-hour-title">
-                    <div class="news-card-img" role="img"
-                        aria-label="2025 Commencement Coffee Hour Image"></div>
-                    <div class="news-card-content">
-                        <div class="news-card-category">2025 Commencement</div>
-                        <h3 id="coffee-hour-title" class="news-card-title">2025 Commencement Coffee Hour</h3>
-                        <p class="news-card-desc">How we celebrated the 2025 graduated.</p>
-                    </div>
-                </article>
-                <div class="news-card-secondary-row">
-                    <article class="news-card-1" aria-labelledby="commencement-celebration-title">
-                        <div class="news-card-category">Upcoming event</div>
-                        <h3 id="commencement-celebration-title" class="news-card-title">2025 Commencement Celebration</h3>
-                        <div class="news-card-img" role="img"
-                            aria-label="2025 Commencement Celebration Image"></div>
-                    </article>
-                    <article class="news-card-spotlight" aria-labelledby="graduate-spotlight-title">
-                        <div class="news-card-category">Graduate Spotlight</div>
-                        <div class="news-card-img" role="img"
-                            aria-label="Graduate Spotlight Image"></div>
-                        <div class="news-card-copy">
-                            <h3 id="graduate-spotlight-title" class="news-card-title">Johnny S.</h3>
-                            <p class="news-card-desc">Congrats Johnny on qualifying for Nationals!</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2 class="cta-title">Support the Muslim Alumni Network!</h2>
-                <button class="cta-join">Join us</button>
-            </div>
-        </section>
-    </main>
-    <footer class="footer-section">
-        <div class="footer-social">
-            <a href="https://instagram.com/cmumuslimalumni" target="_blank" aria-label="Instagram">
-                <i data-lucide="instagram"></i>
-            </a>
-        </div>
-        <div class="footer-content-container">
-            <p class="footer-content-title">Follow us to stay updated.</p>
-            <address class="footer-contact-info">
-                <a href="mailto:cmumuslimalumni@gmail.com">cmumuslimalumni@gmail.com</a><br />
-                <span>@cmumuslimalumni</span>
-            </address>
-        </div>
-        <div class="footer-copyright-container">
-            <p>© 2026 CMU Muslim Alumni Network. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CMU Muslim Alumni Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
 
+<body>
+  <!-- NAV -->
+  <header class="site-header" id="home">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="CMU Muslim Alumni Logo.png" alt="CMU Muslim Alumni Logo" />
+        <span>CMU Muslim Alumni</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <img
+        src="CMU Muslim Alumni Logo.png"
+        alt="CMU Muslim Alumni Network Logo"
+        class="hero-logo"
+      />
+      <h1>CMU Muslim Alumni Network</h1>
+      <p>Connecting alumni. Supporting students. Strengthening community.</p>
+      <a class="btn-primary" href="#contact">Join the Network</a>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>What We Do</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Mission</h3>
+        <p>
+          To unite Muslim alumni of Carnegie Mellon University and foster a
+          lifelong network of mentorship, service, and community.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Vision</h3>
+        <p>
+          A thriving, connected alumni body that uplifts students and alumni
+          spiritually, professionally, and socially.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- EVENTS -->
+  <section class="section alt" id="events">
+    <h2>Events & Highlights</h2>
+
+    <div class="event">
+      <h3>2025 Commencement Coffee Hour</h3>
+      <p>
+        Alumni and graduates gathered to celebrate the Class of 2025 and reflect
+        on their CMU journey.
+      </p>
+    </div>
+
+    <div class="event">
+      <h3>Upcoming: Commencement Celebration</h3>
+      <p>
+        Join fellow alumni and families as we honor graduating students and
+        welcome them into the alumni community.
+      </p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Stay Connected</h2>
+    <p>Be part of a growing alumni network rooted in faith and service.</p>
+    <a class="btn-secondary" href="#contact">Get Involved</a>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-container">
+      <!-- COLUMN 1: Contact -->
+      <div class="footer-col contact-col">
+        <p class="footer-title">Contact</p>
+        <a href="mailto:cmumuslimalumni@gmail.com">cmumuslimalumni@gmail.com</a>
+        <p>@cmumuslimalumni</p>
+      </div>
+
+      <!-- COLUMN 2: Socials -->
+      <div class="footer-col social-col">
+        <p class="footer-title">Connect</p>
+        <div class="social">
+          <a href="https://instagram.com/cmumuslimalumni" target="_blank" aria-label="Instagram">
+            <i data-lucide="instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
+            <i data-lucide="message-circle"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- COLUMN 3: Branding -->
+      <div class="footer-col brand-col">
+        <img src="CMU Muslim Alumni Logo_square.png" alt="CMU Muslim Alumni Logo" class="footer-logo">
+        <p>CMU Muslim Alumni Network</p>
+        <p>© 2026 All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
 </html>
