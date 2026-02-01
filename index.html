@@ -5,29 +5,56 @@
   <title>CMU Muslim Alumni Network</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="index.css" />
-  <link rel="icon" href="CMU Muslim Alumni Logo_square.png" type="image/png">
+  <link rel="icon" href="assets/CMU Muslim Alumni Logo_square.png" type="image/png">
   <script src="https://unpkg.com/lucide@latest"></script>
-</head>
 
-<body>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>CMU Muslim Alumni Network</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const heroImages = [
+    "assets/Gallery Pics/board_21-22.JPEG",
+    "assets/Gallery Pics/board_22-23.JPEG",
+    "assets/Gallery Pics/charity_week_2022.PNG",
+    "assets/Gallery Pics/charity_week_2023.PNG",
+    "assets/Gallery Pics/community_iftar_2023.JPEG",
+    "assets/Gallery Pics/eid_2022.JPEG",
+    "assets/Gallery Pics/eid_2023.JPEG",
+    "assets/Gallery Pics/eid_2024.JPEG",
+    "assets/Gallery Pics/IMG_0296.JPEG",
+    "assets/Gallery Pics/IMG_0316.JPEG",
+    "assets/Gallery Pics/IMG_5359.JPG",
+    "assets/Gallery Pics/IMG_6160.JPEG",
+    "assets/Gallery Pics/kennywood_2023.JPEG",
+    "assets/Gallery Pics/ramadan_2023.JPEG",
+    "assets/Gallery Pics/ramadan_fence_2023.PNG"
+  ];
+
+  function shuffle(arr) {
+    return [...arr].sort(() => Math.random() - 0.5);
+  }
+
+  const photos = document.querySelectorAll(".hero-photo");
+  const selected = shuffle(heroImages).slice(0, photos.length);
+
+  photos.forEach((el, i) => {
+    el.style.backgroundImage = `url("${selected[i]}")`;
+    el.style.setProperty("--tilt", `${(Math.random() * 8 - 4).toFixed(1)}deg`);
+  });
+
+});
+</script>
 
 <body>
   <!-- NAV -->
   <header class="site-header" id="home">
     <div class="nav-inner">
       <div class="nav-brand">
-        <img src="CMU Muslim Alumni Logo.png" alt="CMU Muslim Alumni Logo" />
+        <img src="assets/CMU Muslim Alumni Logo.png" alt="CMU Muslim Alumni Logo" />
         <span>CMU Muslim Alumni</span>
       </div>
 
@@ -40,8 +67,19 @@
     </div>
 
     <div class="hero">
+    <!-- Collage layer -->
+    <div class="hero-collage">
+      <div class="hero-photo"></div>
+      <div class="hero-photo"></div>
+      <div class="hero-photo"></div>
+      <div class="hero-photo"></div>
+      <div class="hero-photo"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
       <img
-        src="CMU Muslim Alumni Logo.png"
+        src="assets/CMU Muslim Alumni Logo.png"
         alt="CMU Muslim Alumni Network Logo"
         class="hero-logo"
       />
@@ -49,6 +87,8 @@
       <p>Connecting alumni. Supporting students. Strengthening community.</p>
       <a class="btn-primary" href="#contact">Join the Network</a>
     </div>
+</div>
+
   </header>
 
   <div class="section-divider"></div>
@@ -136,7 +176,7 @@
 
       <!-- COLUMN 3: Branding -->
       <div class="footer-col brand-col">
-        <img src="CMU Muslim Alumni Logo_square.png" alt="CMU Muslim Alumni Logo" class="footer-logo">
+        <img src="assets/CMU Muslim Alumni Logo_square.png" alt="CMU Muslim Alumni Logo" class="footer-logo">
         <p>CMU Muslim Alumni Network</p>
         <p>© 2026 All rights reserved.</p>
       </div>

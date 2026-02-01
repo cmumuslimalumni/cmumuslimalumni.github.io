@@ -95,59 +95,6 @@ body {
   color: var(--skibo-red);
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  padding: 140px 24px;
-  text-align: center;
-
-  background-image: url("plaid.png");
-  background-repeat: no-repeat;
-  background-size: 1600px auto;
-  background-position: center top;
-}
-
-/* soft white overlay for readability */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.50);
-  z-index: 1;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-logo {
-  width: 140px;
-  margin-bottom: 24px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: var(--skibo-red);
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 32px;
-}
-
-.hero h1::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: var(--gold-thread);
-  margin: 20px auto 0;
-  border-radius: 2px;
-}r
-
 /* BUTTONS */
 .btn-primary,
 .btn-secondary {
@@ -377,6 +324,139 @@ footer {
   font-size: 0.9rem;
 }
 
+/* HERO */
+
+.hero {
+  position: relative;
+  padding: 140px 24px;
+  text-align: center;
+  overflow: hidden;
+
+  background-image: url("assets/plaid.png");
+  background-repeat: no-repeat;
+  background-size: 1600px auto;
+  background-position: center top;
+}
+
+/* collage layer */
+.hero-collage {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+  padding: 80px;
+}
+
+/* individual photos */
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  transform: rotate(var(--tilt));
+  transition: transform 0.3s ease;
+  background-color: var(--skibo-red);
+  overflow: hidden;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(1px);
+  transform: scale(1.1);
+
+  z-index: 1;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* mask that hides blur in the center */
+  mask-image: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    black 75%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    black 75%
+  );
+
+  background: transparent;
+  z-index: 2;
+}
+
+.hero-photo {
+  background-blend-mode: normal;
+}
+
+
+/* feature image */
+.hero-photo:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+/* content sits on top */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--skibo-red);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold-thread);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* Soft white overlay above photos */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 235, 0.55);
+  z-index: 2;
+  pointer-events: none;
+}
+
 /* MOBILE */
 @media (max-width: 700px) {
   .nav-links {
@@ -385,6 +465,16 @@ footer {
 
   .hero h1 {
     font-size: 2.2rem;
+  }
+
+  .hero-collage {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 24px;
+  }
+
+  .hero-photo:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
   }
 
   .section {
