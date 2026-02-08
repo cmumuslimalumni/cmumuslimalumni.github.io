@@ -4,7 +4,7 @@
   --gold-thread: #fdb513;
   --blue-thread: #033572;
 
-  --bg-main: #e6d5b0;
+  --bg-main: #fffaef;
   --border: #ddd;
 }
 
@@ -219,7 +219,6 @@ footer {
   justify-content: space-between;
   padding: 48px 24px;
   background: var(--bg-main);
-  border-top: 2px solid var(--skibo-red);
   color: #111;
   gap: 32px;
 }
@@ -317,6 +316,27 @@ footer {
   opacity: 0.8;
 }
 
+/* Image divider */
+.section-image-divider {
+  width: 100%;
+  height: clamp(240px, 40vh, 420px);
+
+  background-image: url("assets/Gallery Pics/ramadan_fence_2023.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* subtle polish */
+  position: relative;
+}
+
+/* optional soft overlay for consistency */
+.section-image-divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+}
 
 .copyright {
   margin-top: 24px;
@@ -363,6 +383,7 @@ footer {
   z-index: 1;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 16px;
   box-shadow: 0 16px 40px rgba(0,0,0,0.18);
   transform: rotate(var(--tilt));
