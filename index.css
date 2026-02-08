@@ -4,7 +4,7 @@
   --gold-thread: #fdb513;
   --blue-thread: #033572;
 
-  --bg-main: #fcfaf6;
+  --bg-main: #e6d5b0;
   --border: #ddd;
 }
 
@@ -30,7 +30,7 @@ body {
 
 /* HEADER */
 .site-header {
-  background: #ffffff;
+  background: var(--bg-main);
 }
 
 /* NAV */
@@ -38,7 +38,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #ffffff;
+  background: var(--bg-main);
   border-bottom: 3px solid var(--skibo-red);
   max-width: 1200px;
   margin: 0 auto;
@@ -138,12 +138,12 @@ body {
 /* SECTIONS — FULL WIDTH */
 .section {
   width: 100%;
-  background: #ffffff;
+  background: var(--bg-main);
   padding: 96px 0;
 }
 
 .section.alt {
-  background: #ffffff; /* keep white */
+  background: var(--bg-main); /* keep white */
 }
 
 .section h2 {
@@ -206,7 +206,7 @@ body {
 /* FOOTER — FULL WIDTH */
 footer {
   width: 100%;
-  background: #ffffff;
+  background: var(--bg-main);
   color: #111;
   border-top: 1px solid #eee;
 }
@@ -218,7 +218,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 48px 24px;
-  background: #ffffff;
+  background: var(--bg-main);
   border-top: 2px solid var(--skibo-red);
   color: #111;
   gap: 32px;
@@ -328,13 +328,19 @@ footer {
 
 .hero {
   position: relative;
-  padding: 140px 24px;
-  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 140px 24px;
+  text-align: center; */
   overflow: hidden;
 
+  padding: clamp(80px, 10vh, 160px) clamp(16px, 5vw, 64px);
+
   background-image: url("assets/plaid.png");
-  background-repeat: no-repeat;
-  background-size: 1600px auto;
+  background-repeat: repeat;
+  /* background-size: 1600px auto; */
   background-position: center top;
 }
 
