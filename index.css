@@ -178,6 +178,82 @@ body {
   color: var(--blue-thread);
 }
 
+/* BOARD TILES */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.board-tile {
+  background: #fff;
+  border-radius: 14px;
+  border-top: 6px solid var(--skibo-red);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.board-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(147, 17, 32, 0.12);
+}
+
+/* Placeholder — swap for <img class="board-photo"> when photos are ready */
+.board-photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--brick-beige);
+  /* silhouette icon via CSS */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='28' r='14' fill='%23c8bfa8'/%3E%3Cellipse cx='40' cy='62' rx='22' ry='14' fill='%23c8bfa8'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-size: 60%;
+}
+
+/* When you swap in real photos, this keeps them square and cropped */
+.board-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.board-info {
+  padding: 16px 12px 20px;
+}
+
+.board-name {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.board-role {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--skibo-red);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.board-degree {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #111;
+}
+
+/* Mobile: stack to single column */
+@media (max-width: 500px) {
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* EVENTS */
 .event {
   max-width: 700px;
