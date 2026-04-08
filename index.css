@@ -514,6 +514,10 @@ footer {
     text-align: center;
   }
 
+  .brand-col {
+    align-items: center;
+  }
+
   .footer-col {
     flex: none;
   }
