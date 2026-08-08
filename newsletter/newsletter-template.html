@@ -60,7 +60,7 @@
   ship all of them in one issue. A real issue runs 500–800 words / about
   8 sections. Suggested per-issue mix:
 
-    ALWAYS      At a Glance · Salaam · Reflection · From Campus ·
+    ALWAYS      At a Glance · Salam · Reflection · From Campus ·
                 Get Involved · Footer
     ROTATE      Alumni Spotlight and Student Spotlight — alternate issues
     AS NEEDED   Announcements · Upcoming Events · Regional Events ·
@@ -86,7 +86,7 @@
          Mailchimp *|UNSUB|*      · Kit  {{ unsubscribe_url }}
 
   ORDER OF THE ISSUE — three movements, deliberately
-    1. OPEN         Salaam · Reflection
+    1. OPEN         Salam · Reflection
     2. WHAT'S ON    Announcements · Upcoming Events · In Your City
     3. OUR PEOPLE   Spotlights · From Campus · Opportunities · Giving
   Deadlines and RSVPs come before the long reads, so nothing time-sensitive
@@ -149,27 +149,20 @@
        so the two read as distinct elements rather than one fused block. -->
   <tr><td bgcolor="#FFFFFF" style="background-color:#FFFFFF; height:10px; font-size:0; line-height:0;">&nbsp;</td></tr>
 
-  <!-- BISMILLAH — no boxed background; sits directly on the white body.
-       U+FDFD — the single-character Arabic ligature. Written as the HTML
-       entity &#xFDFD; rather than the raw glyph so it survives any ESP that
-       mangles encoding on import.
-       The glyph is wide and short, so it needs a large font-size and a
-       generous line-height to read properly. Font stack covers Apple
-       (Geeza Pro), Windows (Traditional Arabic / Arabic Typesetting) and
-       Linux/Android (Noto Naskh Arabic). If a client has no Arabic font it
-       falls back to a tofu box — an image would avoid that, but images are
-       blocked by default in many clients, so text is the safer bet. -->
+  <!-- BISMILLAH — vector calligraphy, not text. Sourced from a Vecteezy EPS
+       (bismillah/bismillah.eps), trimmed to its bounding box and exported
+       with a transparent background at 880x286 (full source file — still
+       plenty of retina headroom at the 220px display width used here).
+       No font-rendering risk at all — this always looks exactly the same
+       everywhere, unlike the text version, which depended on the reader's
+       device having a matching Arabic font.
+       Relative path so it previews in a browser. BEFORE SENDING, swap to
+       the full hosted URL — email clients cannot read relative paths. -->
   <tr>
-    <td align="center" style="padding:0 44px 0 44px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td align="center" style="padding:16px 20px 9px 20px;">
-            <div lang="ar" dir="rtl" style="font-family:'Aref Ruqaa','Geeza Pro','Traditional Arabic','Arabic Typesetting','Noto Naskh Arabic','Scheherazade New','Amiri',serif; font-size:36px; line-height:46px; color:#000000;">
-              &#xFDFD;
-            </div>
-          </td>
-        </tr>
-      </table>
+    <td align="center" style="padding:16px 44px 9px 44px;">
+      <img src="images/bismillah.png"
+           width="220" height="72" alt="Bismillah — In the name of Allah, the Most Gracious, the Most Merciful"
+           style="display:block; width:220px; height:auto; margin:0 auto;" />
     </td>
   </tr>
 
@@ -217,7 +210,7 @@
     </td>
   </tr>
 
-  <!-- ================= SALAAM · opening note =================
+  <!-- ================= SALAM · opening note =================
        3–5 sentences. Signed by a real person. Rotate the author each issue.
        ======================================================== -->
   <tr>
@@ -714,7 +707,7 @@
         <a href="https://cmumuslimalumni.github.io/" style="color:#941121; text-decoration:underline;">Website</a> &nbsp;&middot;&nbsp;
         <a href="https://www.instagram.com/cmumuslimalumni/" style="color:#941121; text-decoration:underline;">Instagram</a> &nbsp;&middot;&nbsp;
         <a href="[#linkedin]" style="color:#941121; text-decoration:underline;">LinkedIn</a> &nbsp;&middot;&nbsp;
-        <a href="[#whatsapp]" style="color:#941121; text-decoration:underline;">WhatsApp</a>
+        <a href="https://chat.whatsapp.com/LtarUsr2f3p8Txo1Ca1R3K" style="color:#941121; text-decoration:underline;">WhatsApp</a>
       </div>
 
       <div style="font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif; font-size:12px; line-height:20px; color:#6B6560; text-align:center; padding-top:14px;">
@@ -727,16 +720,13 @@
         <a href="{$unsubscribe}" style="color:#6B6560; text-decoration:underline;">Unsubscribe</a>
       </div>
 
-      <!-- NOTE: there's no single Unicode ligature codepoint for "Jazakum
-           Allahu Khayran" the way Bismillah has U+FDFD — that codepoint is
-           specific to the Bismillah phrase; no equivalent was ever encoded
-           for this one. Matched the bismillah's *style* instead: real
-           Arabic script (not transliteration), same RTL font stack, no
-           italic — closest equivalent to "same style" without a fabricated
-           character that would just render as a tofu box everywhere. -->
-      <div lang="ar" dir="rtl" style="font-family:'Aref Ruqaa','Geeza Pro','Traditional Arabic','Arabic Typesetting','Noto Naskh Arabic','Scheherazade New','Amiri',serif; font-size:22px; line-height:30px; color:#000000; text-align:center; padding-top:20px;">
-        جزاكم الله خيرًا
-      </div>
+      <!-- Vector calligraphy image, replacing the rendered Arabic text —
+           same reasoning as the bismillah swap: no font-dependency risk,
+           looks identical everywhere instead of depending on the reader's
+           device having a matching Arabic font. -->
+      <img src="images/jazakallah.png"
+           width="180" height="71" alt="Jazakallah Khairan — may Allah reward you with goodness"
+           style="display:block; width:180px; height:auto; margin:20px auto 0 auto;" />
     </td>
   </tr>
 
