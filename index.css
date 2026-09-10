@@ -272,12 +272,14 @@ h3 { font-size: 1.55rem; }
   }
 }
 
-.join-callout {
+.join-section {
   width: min(calc(100% - 40px), var(--content));
-  max-width: var(--content);
-  margin: 0 auto;
-  padding: clamp(3.5rem, 6vw, 5.5rem) 24px;
-  text-align: center;
+  margin: 0 auto clamp(3.5rem, 6vw, 5.5rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: grid;
+  grid-template-columns: minmax(230px, .42fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4.5rem);
   background-image:
     linear-gradient(rgba(250, 246, 240, .92), rgba(250, 246, 240, .92)),
     url("assets/plaid.png");
@@ -286,8 +288,37 @@ h3 { font-size: 1.55rem; }
   border: 1px solid var(--line);
   border-top: 3px solid var(--gold);
 }
-.join-callout h2 { margin: 0 auto; }
-.join-callout > p:not(.eyebrow) { margin: 1.3rem auto 1.7rem; color: var(--muted); }
+.join-intro {
+  position: sticky;
+  top: 2rem;
+}
+.join-intro > p:not(.section-kicker) {
+  margin: 1.3rem 0 0;
+  color: var(--muted);
+}
+.join-fallback {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.join-fallback p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: .84rem;
+}
+.join-form-shell {
+  min-width: 0;
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px rgba(34, 32, 31, .1);
+}
+.join-form-frame {
+  display: block;
+  width: 100%;
+  height: clamp(780px, 88vh, 980px);
+  border: 0;
+}
 
 footer {
   padding: 2.5rem max(20px, calc((100% - var(--content)) / 2));
@@ -320,6 +351,8 @@ footer {
   .highlight-card:first-child img { aspect-ratio: 16 / 9; }
   .highlight-card:first-child .highlight-placeholder { aspect-ratio: 16 / 9; }
   .highlight-card:first-child .highlight-placeholder img { aspect-ratio: 1 / 1; }
+  .join-section { grid-template-columns: 1fr; }
+  .join-intro { position: static; }
 }
 
 @media (max-width: 620px) {
@@ -343,7 +376,8 @@ footer {
   .highlight-card:first-child .highlight-placeholder img { aspect-ratio: 1 / 1; }
   .leadership-list li { grid-template-columns: 1fr; gap: .2rem; }
   .board-grid { grid-template-columns: 1fr; }
-  .join-callout { width: min(calc(100% - 28px), var(--content)); }
+  .join-section { width: min(calc(100% - 28px), var(--content)); padding: 1.5rem; }
+  .join-form-frame { height: 820px; }
   footer { grid-template-columns: 1fr; }
 }
 
